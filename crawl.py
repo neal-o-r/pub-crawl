@@ -37,7 +37,7 @@ def get_lat_lon(address):
         params = {
                 'address': address,
                 'region': 'ie',
-                'key': 'AIzaSyChQ8dLwxwqV0TnIlAKhFw3akqvpW0-54Q'
+                'key': '' #KEY HERE
                 }
 
         # Do the request and get the response data
