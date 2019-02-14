@@ -1,27 +1,66 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import requests
+import json
 
 from concorde.tsp import TSPSolver
 
+GOOGLE_MAPS_API_URL = 'https://maps.googleapis.com/maps/api/geocode/json'
+
+
 def read_data():
 
-    pubs = pd.read_csv('pubs.csv')
     p = "Publican's Licence (7-Day Ordinary)"
     df = pd.read_csv('liquor-licences.csv').query(f'description == "{p}"')
 
-    join = df.merge(pubs.drop_duplicates('name'),
-        left_on='trading_name', right_on='name', how='left')
+    df = df[~df.trading_name.isnull()]
 
-    dubs = join[(join.latitude.notnull()) & (join.county.str.startswith('Dublin'))]
+    df['address_2'] = [a if not a.startswith('&') else ''
+                                    for a in df['address_2'].astype(str)]
+    df['address_2'] = df['address_2'].str.replace('nan', '')
+
+    df['Full_address'] = df.filter(regex='^address'
+                          ).fillna(''
+                          ).apply(lambda x: ", ".join(x), axis=1)
+
+    df['Full_address'] = df.trading_name.fillna('') + ', ' + df.Full_address
+    df['Full_address'] = df.Full_address.str.rstrip('+') + ', ' + df.county
+    df['Full_address'] = df.Full_address.str.replace(' ,', '').str.lstrip(' ')
+
+    dubs = df[df.county.str.startswith('Dublin')]
 
     return dubs
+
+def get_lat_lon(address):
+
+        params = {
+                'address': address,
+                'region': 'ie',
+                'key': 'AIzaSyChQ8dLwxwqV0TnIlAKhFw3akqvpW0-54Q'
+                }
+
+        # Do the request and get the response data
+        req = requests.get(GOOGLE_MAPS_API_URL, params=params)
+        res = req.json()
+
+        # Use the first result
+        if len(res['results']) == 0:
+                return {'lat':None, 'lng':None, 'address':None}
+
+        result = res['results'][0]
+        geodata = dict()
+        geodata['lat'] = result['geometry']['location']['lat']
+        geodata['lng'] = result['geometry']['location']['lng']
+        geodata['address'] = result['formatted_address']
+
+        return geodata
 
 
 def filter_on_dist(df):
 
     centre = np.array([53.347311, -6.259136])
-    outer = np.array([53.390541, -6.348379])
+    outer = np.array([53.378566, -6.355327])
     dist = np.linalg.norm(centre - outer)
 
     df["dist"] = (df[['latitude', 'longitude']] - outer).T.apply(np.linalg.norm)
@@ -29,23 +68,37 @@ def filter_on_dist(df):
     return df.query(f"dist < {dist}").reset_index()
 
 
+def all_lat_lon(df):
+    lat, lng, add = [], [], []
+    for a in df.Full_address:
+        d = get_lat_lon(a)
+        lat.append(d['lat'])
+        lng.append(d['lng'])
+        add.append(d['address'])
 
-if __name__ == "__main__":
+    return lat, lng, add
 
-    dubs = filter_on_dist(read_data())
+def geocode():
+    dubs = read_data()
+    dubs['latitude'], dubs['longitude'], dubs['g_address'] = all_lat_lon(dubs)
+    dubs.to_csv('all_dub_pubs.csv', index=False)
+    return dubs
 
-    '''
+def tsp(df):
+
     solver = TSPSolver.from_data(
-        dubs.latitude,
-        dubs.longitude,
+        df.latitude,
+        df.longitude,
         norm="GEO"
     )
 
     tour_data = solver.solve()
+    return df.iloc[tour_data.tour].reset_index()
 
-    dubs = dubs.iloc[tour_data.tour].reset_index()
-    dubs[['type', 'color', 'url']] = 'pub', 'a80000', None
 
-    dubs[['latitude', 'longitude', 'name',
-        'type', 'color', 'url']].to_csv('optimal_dub_pubs.csv',index_label='id')
-    '''
+if __name__ == "__main__":
+
+    dubs = pd.read_csv("all_dub_pubs.csv")
+    dubs = filter_on_dist(dubs[dubs.latitude.notnull()])
+
+    dubs = tsp(dubs)

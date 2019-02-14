@@ -54,7 +54,7 @@
       //console.log(data[0], getLL(data[0]), project(data[0]))
       var dots = svg.selectAll("circle.dot")
         .data(data)
-      
+   
       dots.enter().append("circle").classed("dot", true)
       .attr("r", 1)
       .style({
@@ -92,7 +92,6 @@
       render()
     })
 
-    
   </script>
 </body>
 
