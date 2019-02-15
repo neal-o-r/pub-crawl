@@ -52,10 +52,9 @@
   
     d3.csv("dub_pubs.csv", function(err, data) {
       //console.log(data[0], getLL(data[0]), project(data[0]))
-      var dots = svg.selectAll("circle.dot")
-        .data(data)
+      var dots = svg.selectAll("circle").data(data)
    
-      dots.enter().append("circle").classed("dot", true)
+      dots.enter().append("circle")
       .attr("r", 1)
       .style({
         fill: "#0082a3",
@@ -65,8 +64,9 @@
       })
       .transition().duration(1000)
       .attr("r", 2)
+      .append("title")
       
-      function render() {
+     function render() {
         dots
         .attr({
           cx: function(d) { 
@@ -77,6 +77,7 @@
             var y = project(d).y;
             return y
           },
+	  text: function(d) {d.trading_name;},
         })
       }
 
