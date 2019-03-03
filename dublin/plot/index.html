@@ -153,15 +153,8 @@
             .attr("class", "travelMarker");
 
 
-        // For simplicity I hard-coded this! I'm taking
-        // the first and the last object (the origin)
-        // and destination and adding them separately to
-        // better style them. There is probably a better
-        // way to do this!
-        var originANDdestination = featuresdata//[featuresdata[0], featuresdata[17]]
-
         var begend = g.selectAll(".drinks")
-            .data(originANDdestination)
+            .data(featuresdata)
             .enter()
             .append("circle", ".drinks")
             .attr("r", 2)
@@ -170,7 +163,7 @@
 
         // I want names for my coffee and beer
         var text = g.selectAll("text")
-            .data(originANDdestination)
+            .data(featuresdata)
             .enter()
             .append("text")
             .text(function(d) {
