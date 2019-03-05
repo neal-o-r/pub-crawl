@@ -2,32 +2,38 @@ from route import Route, Point
 import random
 from itertools import permutations
 import matplotlib.pyplot as plt
-import pandas as pd
-
-n = 10
 
 
 def rand_points(n):
+    # make random points
     return [Point(random.randint(0, 100), random.randint(0, 100)) for i in range(n)]
 
 
 def nonred_permutations(pts):
+    # all non-redundant permutations
+    # e.g. [1,2,3] and [3,1,2] are redundant, they define the same path
     head, *tail = pts
     return [[head] + list(p) for p in permutations(tail)]
 
 
 def exhaustive(pts):
+    # check all non-red permutations and select min
     return min((Route(i) for i in nonred_permutations(pts)), key=lambda x: x.length())
 
 
-def greedy(pts, route):
+def greedy(pts, path=[]):
+    # TODO: make this accept a Route object
+    # recursively find greedy path
     if not pts:
-        return route
+        return path
 
-    # p = min(pts, key=lambda x: abs(route[-1] - x))
-    p = min(zip(pts, times[inds[route[-1]]]), key=lambda x: x[1])[0]
+    # if the path is empty, put the last value into path
+    if not len(path):
+        path.append(pts.pop())
+
+    p = min(pts, key=lambda x: abs(path[-1] - x))
     i = pts.index(p)
-    return greedy(pts[:i] + pts[i + 1 :], route + [p])
+    return greedy(pts[:i] + pts[i + 1 :], path + [p])
 
 
 def plot_path(route):
@@ -44,6 +50,8 @@ def plot_path(route):
 
 
 def subsegments(N):
+    # given a number, generate all indices of
+    # subsegments of a path len <= N
     return [
         (i, i + length)
         for length in reversed(range(2, N))
@@ -51,16 +59,21 @@ def subsegments(N):
     ]
 
 
-def try_swaps(route_in, n=10):
+def try_swaps(route_in):
+    # recursively do swaps until there
+    # aren't any left that decrease length
+    # i.e. until there are no crosses left
     post_swap = swap_points(route_in)
-    if (post_swap == route_in) or (n == 0):
+    if (post_swap == route_in):
         return post_swap
     else:
-        print(n)
-        return try_swaps(post_swap, n=n-1)
+        return try_swaps(post_swap)
 
 
 def swap_points(r):
+    # go through all subsegments
+    # and try reversing it, if the length
+    # decreases keep the swap
     min_l = r.length()
     p = r.path[:]
     for s in subsegments(len(r)):
@@ -76,13 +89,13 @@ def swap_points(r):
     return r
 
 
+def tsp(pts):
+    return try_swaps(Route(greedy(pts)))
+
 if __name__ == "__main__":
 
-    pubs = pd.read_csv("plot/dub_pubs.csv")
-    pts = [Point(r.latitude, r.longitude) for i, r in pubs.iterrows()]
-    opt = try_swaps(Route(pts))
+    pts = rand_points(100)
+    optimised_route = tsp(pts)
 
-    inds = [pts.index(o) for o in opt]
-    pubs.iloc[inds][['latitude', 'longitude', 'trading_name']].to_csv("plot/opt_pubs.csv")
-
+    plot_path(optimised_route)
 
