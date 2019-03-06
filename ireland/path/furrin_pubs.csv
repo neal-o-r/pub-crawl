@@ -1,0 +1,17 @@
+bash-3.2$ grep -n -v '^5' all_pubs_clean.csv
+1:latitude,longitude,index,trading_name,Address
+21:61.92411,25.7481511,38,Bridge House Finlans,Finland
+591:43.8340437,11.0245138,1293,Seano's,"Seano PO, Italy"
+2171:43.7695604,11.2558136,5134,Florence O'sullivan,"Florence, Metropolitan City of Florence, Italy"
+2888:44.3264115,-76.1690797,6847,Woodview Inn,"250 King St W, Gananoque, ON K7G 2G6, Canada"
+3286:41.3804981,-70.645473,7793,Martha's Vineyard,"Martha's Vineyard, Massachusetts, USA"
+3600:24.5550593,-81.7799871,8530,The Key West,"Key West, FL 33040, USA"
+4288:39.962884,-4.8304536,10100,Talavera Place,"45600 Talavera de la Reina, Toledo, Spain"
+4601:-33.897,151.1793,10819,Lombards Bar,"Newtown NSW 2042, Australia"
+5573:-43.5223581,172.6276424,14011,The Richmond,"121/7 Dublin St, Christchurch Central, Christchurch 8013, New Zealand"
+
+bash-3.2$ grep -n -v '^5' all_pubs_clean.csv
+1:latitude,longitude,index,trading_name,Address
+
+bash-3.2$ grep -n -v '^5' all_pubs_clean.csv
+bash-3.2$
