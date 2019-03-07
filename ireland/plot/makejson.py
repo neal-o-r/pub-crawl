@@ -1,8 +1,7 @@
 import pandas as pd
 import json
 
-pubs = pd.read_csv("../path/pubs.4", delimiter="\t",
-        skiprows=4, names=["latitude", "longitude"])
+pubs = pd.read_csv("../path/path.csv")
 
 points = {
     "type": "FeatureCollection",
@@ -18,7 +17,7 @@ for i, row in pubs.iterrows():
             "longitude": row.longitude,
             "time": int(i + 1),
             "id": "route1",
-            "name": "None",
+            "name": str(row.trading_name) + ' -- ' + str(row.address)
         },
         "geometry": {"type": "Point", "coordinates": [row.longitude, row.latitude]},
     }
@@ -27,4 +26,4 @@ for i, row in pubs.iterrows():
 
 points["features"] = features
 
-json.dump(points, open('pubs.json', 'w'), indent=4)
+json.dump(points, open('ireland.json', 'w'), indent=4)
