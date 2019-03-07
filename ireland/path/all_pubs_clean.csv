@@ -2248,10 +2248,6 @@ NODE_COORD_SECTION
 52.452715 -9.663621 5321 Your Man's Bar "Main Street   Ballyduff    Tralee   Co. Kerry  Ireland"
 52.4064615 -9.6181276 5322 Dew Drop Inn "Monument  Lixnaw  Co. Kerry  Ireland"
 52.0841786 -9.2191156 5323 Dennehy's Bar "West End  Rathmore  Co. Kerry  Ireland"
-<<<<<<< HEAD
-54.79882 -5.83031 5327 Half Way House "Gleno  Larne BT40 3FD  UK"
-=======
->>>>>>> 53bf0a9f571b4aebf45dc5b6e29c06e850ae13c7
 52.511565 -9.673429 5328 The Cashen Bar "Main St  Ballybunnion  Ballybunion  Co. Kerry  Ireland"
 51.8279453 -10.17268 5330 Waterville Lake Hotel "Waterville  Co. Kerry  Ireland"
 52.2689683 -9.6975174 5332 Sportsfield Bar "42 Boherbee  Cloonalour  Tralee  Co. Kerry  Ireland"
@@ -2327,10 +2323,6 @@ NODE_COORD_SECTION
 52.4147893 -9.3901918 5470 The Village "Duagh  Co. Kerry  Ireland"
 52.1404534 -10.266382 5472 Griffins Pub "14 John St  Gortonora  Dingle  Co. Kerry  Ireland"
 52.2306888 -9.4641262 5473 Shoemaker Inn "Lower Main St  Chapel Quarter  Castleisland  Co. Kerry  Ireland"
-<<<<<<< HEAD
-53.446622 -2.308713 5474 Stretford End "Stretford  Manchester  UK"
-=======
->>>>>>> 53bf0a9f571b4aebf45dc5b6e29c06e850ae13c7
 52.269174 -9.703684 5475 The Blasket Inn "28 Lower Castle St  Cloonalour  Tralee  Co. Kerry  Ireland"
 52.2674992 -9.7154531 5478 The Clubhouse "Strand St  Tralee  Co. Kerry  Ireland"
 52.1407454 -10.2666673 5480 Half Door "3 John St  Gortonora  Dingle  Co. Kerry  V92 AY98  Ireland"
@@ -2424,10 +2416,6 @@ NODE_COORD_SECTION
 53.3408392 -6.9425571 5732 The Turn Inn "Derrinturn  Carbury  Co. Kildare  Ireland"
 53.1573 -6.9125746 5733 An Goban Saor "Claregate St  Kildare  Ireland"
 53.1303416 -6.7456413 5740 The Hideout "Main St  Kilcullenbridge  Kilcullen  Co. Kildare  Ireland"
-<<<<<<< HEAD
-54.4602984 -5.8350168 5744 The White Horse Inn "49-53 Main St  Saintfield  Ballynahinch BT24 7AB  UK"
-=======
->>>>>>> 53bf0a9f571b4aebf45dc5b6e29c06e850ae13c7
 53.3727548 -6.5985376 5746 Newtown Inn "Newtown Shopping Centre  Greenfield  Maynooth  Co. Kildare  Ireland"
 53.3812409 -6.5914381 5747 The Mantra Bar "Main St  Maynooth  Co. Kildare  Ireland"
 53.2394719 -6.855413 5751 The Leap Inn "R415  Russellstown  Co. Kildare  Ireland"
@@ -2735,10 +2723,6 @@ NODE_COORD_SECTION
 53.1553215 -7.1804583 6511 Finlays "11 Bracklone St  Bracklone  Portarlington  Co. Laois  Ireland"
 53.119871 -7.11119 6513 Delaney's "Ballintogher  Ballybrittas  Co. Laois  R32AH30  Ireland"
 53.1599737 -7.1892172 6514 The Continental Bar "Main St  Droughill  Portarlington  Co. Laois  Ireland"
-<<<<<<< HEAD
-51.580328 -3.307554 6515 The Hawthorn Inn (otherwise Lounge) "Cardiff Rd  Pontypridd CF37 5AG  UK"
-=======
->>>>>>> 53bf0a9f571b4aebf45dc5b6e29c06e850ae13c7
 53.1491044 -7.5253055 6517 Bridge House "Bridge House  Chapel St  Clonaslee  Co. Laois  Ireland"
 53.135843 -7.4069846 6521 Pooles Tavern "Shanbeg  Cloncannon  Co. Laois  Ireland"
 52.9136763 -7.3487743 6528 Benny's "Main St  Knocknamoe  Abbeyleix  Co. Laois  Ireland"
@@ -3131,10 +3115,6 @@ NODE_COORD_SECTION
 53.7251916 -7.7993048 7480 John Browne "5 Market Square  Deanscurragh  Longford  N39 D329  Ireland"
 53.726661 -7.799857 7485 Kanes "27 Ballymahon St  Deanscurragh  Longford  Ireland"
 53.7268959 -7.7976555 7486 Peter Clarke's Bar "24 Dublin St  Deanscurragh  Longford  N39 K522  Ireland"
-<<<<<<< HEAD
-54.4876593 -6.8738689 7487 Quinns Corner House "175 Ballygawley Rd  Dungannon BT70 1RX  UK"
-=======
->>>>>>> 53bf0a9f571b4aebf45dc5b6e29c06e850ae13c7
 53.7259414 -7.7992415 7488 The Market Bar "1 Ballymahon St  Deanscurragh  Longford  N39 X2F1  Ireland"
 53.672416 -7.9890056 7490 The Yacht Bar "1 Main St  Lanesborough  Co. Longford  N39 A9K4  Ireland"
 53.7773233 -7.496501 7491 John Donohoe "Main St  Granard  Co. Longford  Ireland"
@@ -3601,10 +3581,6 @@ NODE_COORD_SECTION
 53.9640248 -8.7926035 8516 Haydens The Keg "Lavy Beg  Charlestown  Co. Mayo  Ireland"
 53.7628799 -9.807446 8517 West View Hotel "West View Hotel  Chapel St  Clooncarrabaun  Louisburgh  Co. Mayo  Ireland"
 53.8968811 -8.9194946 8518 Loughmask Inn "Treenlaur  Tourmakeady  Claremorris  Co. Mayo  Ireland"
-<<<<<<< HEAD
-52.251843 0.020101 8520 Regan's Bar "Bar Hill  Cambridge CB23  UK"
-=======
->>>>>>> 53bf0a9f571b4aebf45dc5b6e29c06e850ae13c7
 53.7950542 -9.3149461 8521 The Punch Bowl "Ballyheane National School  Cunnaker  Castlebar  Co. Mayo  Ireland"
 54.2793831 -9.3697968 8522 Healy's "6 Main St  Ballycastle  Co. Mayo  Ireland"
 53.698591 -9.278969 8523 The Village Inn "Partry  Ballynaslee  Claremorris  Co. Mayo  Ireland"
@@ -3887,10 +3863,6 @@ NODE_COORD_SECTION
 53.9773136 -6.7196564 9184 Macardail "Main St  Drummond Etra  Carrickmacross  Co. Monaghan  Ireland"
 54.1203441 -6.7360154 9188 Dignams "Main St  Conabury  Castleblayney  Co. Monaghan  Ireland"
 54.1792895 -7.2319218 9189 Cuil Darach Restaurant "Fermanagh St  Crossmoyle  Clones  Co. Monaghan  Ireland"
-<<<<<<< HEAD
-54.0472965 -6.6063688 9192 Macs Bar "205A Concession Rd  Crossmaglen  Newry BT35 9JD  UK"
-=======
->>>>>>> 53bf0a9f571b4aebf45dc5b6e29c06e850ae13c7
 54.120659 -6.7397374 9194 Conbury Inn "Moraghy  Castleblayney  Co. Monaghan  Ireland"
 54.2961669 -7.0153764 9196 Jack's Bar "Tedavnet  Co. Monaghan  Ireland"
 54.2213027 -7.0981545 9203 Ben Toal's "Mulladuff  Smithborough  Co. Monaghan  Ireland"
@@ -4142,10 +4114,6 @@ NODE_COORD_SECTION
 54.212868 -9.0930772 9739 Hopkins Public House "1 St Andrew's  Carrowhubbuck South  Enniscrone  Co. Sligo  F26 Y004  Ireland"
 54.2142303 -8.9879935 9741 The Hilltop "Culleens  Co. Sligo  Ireland"
 53.9776156 -8.6184871 9742 The Old Forge "Tawnaghbeg  Cloontia  Co. Mayo  Ireland"
-<<<<<<< HEAD
-54.4882555 -7.1349709 9744 Vins Inn "232 Omagh Rd  Garvaghy  Dungannon BT70 2DX  UK"
-=======
->>>>>>> 53bf0a9f571b4aebf45dc5b6e29c06e850ae13c7
 54.204836 -9.102541 9745 Diamond Coast Hotel "Enniscrone  Co. Sligo  Ireland"
 54.2006449 -8.3649676 9746 The Innisfree "Kingsfort  Ballintogher  Co. Sligo  Ireland"
 52.932861 -9.34621 9747 Flanagans Bar "Main St  Dough  Lahinch  Co. Clare  Ireland"
@@ -4262,10 +4230,6 @@ NODE_COORD_SECTION
 52.8642968 -8.1975561 10009 The Quill Bar "Nenagh  Co. Tipperary  Ireland"
 52.58073 -8.1670499 10010 Jonsies "Cappagh  Cappawhite  Co. Tipperary  Ireland"
 52.6787062 -7.8139427 10012 Cooper J's "11 Liberty Square  Thurles Townparks  Thurles  Co. Tipperary  E41 XY09  Ireland"
-<<<<<<< HEAD
-54.9966124 -7.3085748 10013 Derry Bourkes "Londonderry  UK"
-=======
->>>>>>> 53bf0a9f571b4aebf45dc5b6e29c06e850ae13c7
 52.5166169 -7.8876693 10015 Daverns Bar "20 Main St  St. Dominick's Abbey  Cashel  Co. Tipperary  E25 YK00  Ireland"
 52.516121 -7.888738 10016 Morrissey's Supervalu "Main St  Cashel  Co. Tipperary  Ireland"
 52.353529 -7.7017278 10017 Mulcahys "47 Gladstone St  Oldbridge  Clonmel  Co. Tipperary  Ireland"
@@ -5625,10 +5589,6 @@ NODE_COORD_SECTION
 53.3402577 -6.3167363 14111 Mcdowells "139 Emmet Rd  Inchicore  Kilmainham  Dublin  Ireland"
 53.3316529 -6.2754996 14115 Kate Mcauley's "8 Clanbrassil Street Upper  Merchants Quay  Dublin 8  D08 HP48  Ireland"
 53.3481564 -6.2932568 14116 Reas Public House "25 Parkgate St  Arran Quay  Dublin 8  Co. Dublin  D08 XR94  Ireland"
-<<<<<<< HEAD
-51.6153344 -3.9577939 14122 The Hill Top Bar/the Wig And Pen "134-136 St Helen's Rd  Swansea SA1 4BL  UK"
-=======
->>>>>>> 53bf0a9f571b4aebf45dc5b6e29c06e850ae13c7
 53.3363556 -6.2728594 14124 Kavanagh's "35 New St S  Wood Quay  Dublin 8  Co. Dublin  D08 V972  Ireland"
 53.344975 -6.275827 14125 O'sheas Merchant "12a Lower Bridge Street  Dublin  D08 Y271  Ireland"
 53.342484 -6.288516 14126 The Old Harbour "The Old Harbour  6 Echlin St  Dublin 8  D08 HX3K  Ireland"
@@ -5638,10 +5598,6 @@ NODE_COORD_SECTION
 53.3326135 -6.2689182 14132 The Black And Amber Pubic House "8 S Circular Rd  Wood Quay  Dublin 8  Ireland"
 53.3424238 -6.2944905 14133 Kennys "174 James St  Ushers  Dublin  Ireland"
 53.342929 -6.2909969 14137 The Malthouse "James's Street James St  Ushers  Dublin 8  D08 EP89  Ireland"
-<<<<<<< HEAD
-51.490744 -0.1403619 14141 The Pimlico Tavern "Pimlico  London SW1V  UK"
-=======
->>>>>>> 53bf0a9f571b4aebf45dc5b6e29c06e850ae13c7
 53.3435385 -6.2891176 14144 Mccanns "117 James St  Dublin  Ireland"
 53.3498053 -6.2603097 14148 The Tram Inn "Dublin  Ireland"
 53.3417399 -6.3074832 14151 The Patriots Inn "760 S Circular Rd  Kilmainham  Dublin  Ireland"

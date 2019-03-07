@@ -13,12 +13,15 @@ def pubs_to_records(name):
     return records
 
 
+def do_swaps(df):
+    for i in [1,2,3,4]:
+        order = pd.read_csv(f"verts.{i}", names=["order"])
+        df = df.reindex(order.order)
+    return df
+
 df = pd.DataFrame(data=pubs_to_records("./all_pubs_clean.csv"),
         columns=["lat", "lng", "i", "trading_name", "address"])
 
 df["address"] = df.address.str[:-1]
 
-
-order = pd.read_csv("./verts.4", names=["order"])
-
-
+df = do_swaps(df)
