@@ -147,12 +147,12 @@
 	    .on('mouseover', function(d, i) {
 		// make the mouseover'd element
 		// bigger and red
-		d3.select(".infobox .name").text("None");
+		d3.select(".infobox .name").text(d.properties.name);
 		d3.select(".infobox").style('visibility', 'visible');
 		d3.select(this)
 			.transition()
 			.duration(100)
-			.attr('r', 10)
+			.attr('r', 20)
 			.attr('fill', "red");
 		})
 		.on('mouseout', function(d, i) {

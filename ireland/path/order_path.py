@@ -20,8 +20,10 @@ def apply_reorder(df):
     return df
 
 if __name__ == "__main__":
-    df = pd.DataFrame(data=record_from_pubs("./all_pubs_clean.csv"),
+    df = pd.DataFrame(data=record_from_pubs("./pubs_clean.csv"),
             columns=["latitude", "longitude", "i", "trading_name", "address"])
 
     df["address"] = df.address.str[:-1]
+    df = apply_reorder(df)
 
+    df.to_csv("pubs_path.csv", index=False)
